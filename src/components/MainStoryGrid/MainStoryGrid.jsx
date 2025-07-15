@@ -104,7 +104,7 @@ const StoryList = styled.div`
   display: flex;
   flex-direction: column;
   
-  > *:not(:last-child) {
+  > *:not(:last-of-type) {
     padding-bottom: 16px;
     border-bottom: 1px solid var(--color-gray-300);
     margin-bottom: 16px;
