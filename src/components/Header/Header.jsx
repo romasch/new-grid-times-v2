@@ -58,7 +58,7 @@ const SuperHeader = styled.div`
   background: var(--color-gray-900);
   color: white;
 
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
       display: none;
   }
 `;
@@ -88,15 +88,26 @@ const MainHeader = styled(MaxWidthWrapper)`
     justify-content: center;
     margin-top: 32px;
     margin-bottom: 48px;
-    @media ${QUERIES.desktopAndUp} {
-        justify-content: space-between;
+    
+    @media ${QUERIES.tabletAndUp} {
+        margin-top: 48px;
+        margin-bottom: 72px;
+    }
+    
+    @media ${QUERIES.laptopAndUp} {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        justify-content: revert;
+        margin-top: 16px;
+        margin-bottom: 72px;
     }
 `;
 
 const MainHeaderLeft = styled.div`
     display: none;
 
-    @media ${QUERIES.desktopAndUp} {
+    @media ${QUERIES.laptopAndUp} {
         display: flex;
     }
 `;
@@ -104,14 +115,18 @@ const MainHeaderLeft = styled.div`
 const MainHeaderRight = styled.div`
     display: none;
 
-    @media ${QUERIES.desktopAndUp} {
+    @media ${QUERIES.laptopAndUp} {
+        justify-self: end;
+        align-self: end;
+        
         display: flex;
         flex-direction: column;
-        align-self: end;
-        gap: 4px;
+        align-items: center;
+        gap: 8px;
     }
 `
 const AlreadySubscribed = styled.a`
+    font-size: 0.875rem;
     font-family: var(--font-family-serif);
     font-style: italic;
     text-decoration: underline;
