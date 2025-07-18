@@ -149,6 +149,7 @@ const TopRow = styled.div`
     @media ${QUERIES.tabletAndUp} {
         flex-direction: row;
         justify-content: center;
+        gap: 48px;
     }
     
     @media ${QUERIES.laptopAndUp} {
@@ -186,6 +187,7 @@ const MainNavArea = styled.div`
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
+      text-align: left;
     }
 `;
 
@@ -194,20 +196,12 @@ const MainNavHeading = styled.h2`
   font-weight: var(--font-weight-bold);
   color: var(--color-gray-300);
   margin-bottom: 8px;
-
-  @media ${QUERIES.tabletAndUp} {
-    text-align: left;
-  }
 `;
 
 const MainNavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 4px;
-
-    @media ${QUERIES.tabletAndUp} {
-        align-items: flex-start;
-    }
 `;
 
 const SubfooterWrapper = styled.div`
